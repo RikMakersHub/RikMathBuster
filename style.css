@@ -125,7 +125,6 @@ h2 {
     font-weight: bold;
 }
 
-/* Arithmetic Roulette Wheel Framework Layout */
 .roulette-wrapper {
     display: flex;
     flex-direction: column;
@@ -225,7 +224,6 @@ h2 {
 #log-num { color: var(--accent); }
 #log-square, #log-cube { color: #FFF; }
 
-/* Heliocentric Space System Layout Overrides */
 .space-container {
     background-color: var(--space-black);
     border-radius: 6px;
