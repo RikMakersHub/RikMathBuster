@@ -1,7 +1,7 @@
 /**
- * RikInfinity Engineering Math Processing Engine Module
+ * RikMakersHub Engineering Math Processing Engine Module
  * Architecture Framework: 100% Client-Side Pure Logic Execution Loops
- * Sole Architect: Rounak Bhadra (Corporate Sign-off Active)
+ * Sole Architect: Rounak Bhadra (Class 8 Sovereign Matrix)
  */
 
 // MODULE 2 CONFIG: HIGH-DENSITY ARITHMETIC ELEMENT TRACKERS
