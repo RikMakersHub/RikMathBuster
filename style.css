@@ -1,0 +1,331 @@
+:root {
+    --bg: #0C0905;
+    --card-bg: #16110A;
+    --accent: #FF6B00;
+    --accent-glow: rgba(255, 107, 0, 0.25);
+    --cream: #F5ECD7;
+    --warm-grey: #8E8270;
+    --space-black: #020204;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px dashed var(--accent);
+    background: linear-gradient(to bottom, #110D07, var(--bg));
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2.5rem;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+header p {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+    margin: 8px 0 0 0;
+    font-weight: 800;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 107, 0, 0.12);
+    border-radius: 6px;
+    padding: 35px;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-top: 0;
+    color: #FFF;
+    border-left: 3px solid var(--accent);
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.section-desc {
+    font-size: 0.92rem;
+    color: var(--warm-grey);
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.quad-card {
+    background-color: #211A10;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 24px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.quad-card h3 {
+    margin: 0 0 10px 0;
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.quad-card p {
+    margin: 0 0 15px 0;
+    font-size: 0.88rem;
+    color: #D4C9B8;
+    line-height: 1.5;
+    min-height: 40px;
+}
+
+.formula-row {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.formula-row label {
+    font-size: 0.78rem;
+    color: var(--warm-grey);
+    text-transform: uppercase;
+}
+
+.math-formula {
+    font-family: monospace;
+    background: #000;
+    padding: 4px 8px;
+    border-radius: 3px;
+    color: #FFB347;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Arithmetic Roulette Wheel Framework Layout */
+.roulette-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 15px 0;
+}
+
+.wheel-container {
+    position: relative;
+    width: 260px;
+    height: 260px;
+}
+
+#wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px solid var(--accent);
+    background: conic-gradient(
+        #110d07 0deg 36deg, #211a10 36deg 72deg, 
+        #110d07 72deg 108deg, #211a10 108deg 144deg, 
+        #110d07 144deg 180deg, #211a10 180deg 216deg, 
+        #110d07 216deg 252deg, #211a10 252deg 288deg, 
+        #110d07 288deg 324deg, #211a10 324deg 360deg
+    );
+    transition: transform 3s cubic-bezier(0.1, 0.8, 0.1, 1);
+    box-shadow: 0 0 35px var(--accent-glow);
+}
+
+.pointer {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 24px solid var(--accent);
+    z-index: 10;
+}
+
+.roulette-btn {
+    background-color: var(--accent);
+    color: #FFF;
+    border: none;
+    padding: 14px 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.roulette-btn:hover {
+    background-color: #E05E00;
+    transform: translateY(-1px);
+}
+
+.dialog-box {
+    background: #000;
+    border: 1px solid rgba(255, 107, 0, 0.3);
+    padding: 24px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.dialog-box h4 {
+    margin: 0 0 15px 0;
+    color: var(--warm-grey);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 8px;
+}
+
+.dialog-box p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #D4C9B8;
+}
+
+.dialog-box p span {
+    font-family: monospace;
+    font-weight: 800;
+    font-size: 1.15rem;
+}
+
+#log-num { color: var(--accent); }
+#log-square, #log-cube { color: #FFF; }
+
+/* Heliocentric Space System Layout Overrides */
+.space-container {
+    background-color: var(--space-black);
+    border-radius: 6px;
+    padding: 40px;
+    position: relative;
+    overflow-x: auto;
+    border: 1px solid #14111a;
+}
+
+.solar-system {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+    min-width: 980px;
+    padding: 30px 10px 40px 10px;
+    position: relative;
+}
+
+.celestial-body {
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.2, 1, 0.2, 1), box-shadow 0.2s ease;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.celestial-body:hover {
+    transform: scale(1.18);
+}
+
+.celestial-body span {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    color: var(--warm-grey);
+    font-weight: 600;
+}
+
+.sun { width: 85px; height: 85px; background: radial-gradient(circle, #ffcc00, #ff6600); box-shadow: 0 0 35px #ff6600; }
+.mercury { width: 18px; height: 18px; background: #999999; }
+.venus { width: 26px; height: 26px; background: #e3bb76; }
+.earth { width: 28px; height: 28px; background: #2f72b7; box-shadow: 0 0 12px rgba(47,114,183,0.4); }
+.mars { width: 22px; height: 22px; background: #c1440e; }
+.jupiter { width: 56px; height: 56px; background: #b07f35; }
+.saturn { width: 48px; height: 48px; background: #e2bf7d; border: 4px solid #5c4e36; margin: -4px; }
+.uranus { width: 36px; height: 36px; background: #4b70dd; }
+.neptune { width: 34px; height: 34px; background: #274687; }
+
+.telemetry-display {
+    margin-top: 30px;
+    background: #07070a;
+    border-left: 3px solid #4b70dd;
+    padding: 24px;
+    border-radius: 0 4px 4px 0;
+}
+
+.telemetry-display h3 {
+    margin: 0 0 15px 0;
+    color: #fff;
+    font-size: 1.15rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.telemetry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.telemetry-item {
+    background: rgba(255,255,255,0.01);
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+.telemetry-item label {
+    display: block;
+    font-size: 0.68rem;
+    color: var(--warm-grey);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+}
+
+.telemetry-item span {
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: #FFF;
+    font-weight: 800;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--warm-grey);
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255,107,0,0.05);
+    letter-spacing: 0.02em;
+}
