@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> RikMakersHub Analytical Mathematics Engine </title>
+    <title>RikMakersHub Analytical Mathematics Engine</title>
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,57 +16,50 @@
 
     <div class="container">
 
-        <!-- ─── MODULE 1: THE QUADRILATERAL MATRIX ─── -->
+        <!-- MODULE 1: THE QUADRILATERAL MATRIX -->
         <section class="section-card">
             <h2>1. Quadrilateral Properties &amp; Formulas</h2>
             <div class="grid-3">
-                
                 <div class="quad-card">
                     <h3>Square</h3>
                     <p>All 4 sides equal, all angles 90°, diagonals bisect at 90° and are equal.</p>
                     <div class="formula-row"><label>Perimeter:</label> <span class="math-formula">P = 4a</span></div>
                     <div class="formula-row"><label>Area:</label> <span class="math-formula">A = a²</span></div>
                 </div>
-
                 <div class="quad-card">
                     <h3>Rectangle</h3>
                     <p>Opposite sides equal, all angles 90°, diagonals are equal and bisect each other.</p>
                     <div class="formula-row"><label>Perimeter:</label> <span class="math-formula">P = 2(l + b)</span></div>
                     <div class="formula-row"><label>Area:</label> <span class="math-formula">A = l × b</span></div>
                 </div>
-
                 <div class="quad-card">
                     <h3>Parallelogram</h3>
                     <p>Opposite sides parallel and equal, opposite angles equal, diagonals bisect each other.</p>
                     <div class="formula-row"><label>Perimeter:</label> <span class="math-formula">P = 2(a + b)</span></div>
                     <div class="formula-row"><label>Area:</label> <span class="math-formula">A = b × h</span></div>
                 </div>
-
                 <div class="quad-card">
                     <h3>Rhombus</h3>
                     <p>All sides equal, opposite angles equal, diagonals bisect each other at 90°.</p>
                     <div class="formula-row"><label>Perimeter:</label> <span class="math-formula">P = 4a</span></div>
                     <div class="formula-row"><label>Area:</label> <span class="math-formula">A = ½ × d₁ × d₂</span></div>
                 </div>
-
                 <div class="quad-card">
                     <h3>Trapezium</h3>
                     <p>One pair of opposite sides parallel. Non-parallel sides are unequal unless isosceles.</p>
                     <div class="formula-row"><label>Perimeter:</label> <span class="math-formula">P = Sum of 4 Sides</span></div>
                     <div class="formula-row"><label>Area:</label> <span class="math-formula">A = ½ × (a + b) × h</span></div>
                 </div>
-
                 <div class="quad-card">
                     <h3>Kite</h3>
                     <p>Two pairs of adjacent equal sides, diagonals intersect at 90°, longer diagonal bisects shorter.</p>
                     <div class="formula-row"><label>Perimeter:</label> <span class="math-formula">P = 2(a + b)</span></div>
                     <div class="formula-row"><label>Area:</label> <span class="math-formula">A = ½ × d₁ × d₂</span></div>
                 </div>
-
             </div>
         </section>
 
-        <!-- ─── MODULE 2: ARITHMETIC ROULETTE WHEEL ─── -->
+        <!-- MODULE 2: ARITHMETIC ROULETTE WHEEL -->
         <section class="section-card">
             <h2>2. Number Property Arithmetic Roulette</h2>
             <div class="roulette-wrapper">
@@ -74,9 +67,7 @@
                     <div class="pointer"></div>
                     <div id="wheel"></div>
                 </div>
-                
                 <button class="roulette-btn" onclick="spinArithmeticRoulette()">Spin Matrix Wheel</button>
-
                 <div class="dialog-box">
                     <h4>Arithmetic Real-Time Logs</h4>
                     <p>Selected Integer: <span id="log-num">—</span></p>
@@ -86,11 +77,10 @@
             </div>
         </section>
 
-        <!-- ─── MODULE 3: HELIOCENTRIC SCIENTIFIC NOTATION ─── -->
+        <!-- MODULE 3: HELIOCENTRIC SCIENTIFIC NOTATION -->
         <section class="section-card">
             <h2>3. Heliocentric Astrophysics Standard Form Map</h2>
             <p class="section-desc">Click any celestial body node to query structural physics parameters rendered completely in mathematical scientific notation (Standard Form).</p>
-            
             <div class="space-container">
                 <div class="solar-system">
                     <div class="celestial-body sun" onclick="querySpaceNode('Sun')"><span>Sun</span></div>
@@ -104,7 +94,6 @@
                     <div class="celestial-body neptune" onclick="querySpaceNode('Neptune')"><span>Neptune</span></div>
                 </div>
             </div>
-
             <div class="telemetry-display">
                 <h3 id="space-node-title">Target Node: Select Planet</h3>
                 <div class="telemetry-grid">
@@ -127,7 +116,7 @@
     </div>
 
     <footer>
-        © 2026 RikMakershub Engine Math Suite. Deployed and Controlled Independently under Proprietary Rounak Bhadra System Frameworks.
+        © 2026 RikMakersHub Engine Math Suite. Deployed and Controlled Independently under Proprietary Rounak Bhadra System Frameworks.
     </footer>
 
     <script src="app.js"></script>
